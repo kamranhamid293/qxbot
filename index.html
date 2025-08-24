@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Utradi Trader — Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div class="brand">UTRADI TRADER</div>
+      <div class="byline">Developed by Javed Ahmed</div>
+    </header>
+
+    <section class="controls">
+      <select id="pair"></select>
+      <select id="tf">
+        <option value="5000">5 sec</option>
+        <option value="30000">30 sec</option>
+        <option value="60000">1 min</option>
+      </select>
+      <button id="get" class="getbtn">GET SIGNAL</button>
+    </section>
+
+    <section class="signal-area">
+      <div id="signalCard" class="signal neutral">
+        <div id="signalText" class="signal-text">Press GET SIGNAL</div>
+        <div id="reason" class="reason"></div>
+        <div id="acc" class="accuracy">Accuracy mode: HIGH (conservative)</div>
+      </div>
+    </section>
+
+    <footer class="foot">Pairs from Quotex universe • Test first on Demo</footer>
+  </main>
+
+  <script>
+    window.USE_LIVE = true; // If /api/candles fails, code will auto-fallback to demo candles
+  </script>
+  <script src="pairs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

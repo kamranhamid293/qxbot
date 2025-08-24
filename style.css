@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+:root{
+  --bg1:#07111f; --bg2:#0c1f36;
+  --muted:#b7c7e6; --accent:#3cc9ff;
+  --buy:#10b981; --sell:#ef4444; --wait:#f59e0b;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--muted)}
+.wrap{max-width:880px;margin:40px auto;padding:26px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.brand{font-weight:900;color:white;font-size:1.5rem;letter-spacing:1px}
+.byline{color:#ffd54a;font-weight:700}
+.controls{display:flex;gap:12px;align-items:center;justify-content:center;margin:18px 0 30px;flex-wrap:wrap}
+select{padding:12px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.06);background:rgba(0,0,0,.35);color:white;min-width:150px}
+.getbtn{padding:16px 26px;border-radius:14px;border:none;background:linear-gradient(90deg,var(--accent),#67e8f9);color:#00263b;font-weight:900;font-size:1rem;cursor:pointer;box-shadow:0 8px 30px rgba(60,201,255,.18)}
+.signal-area{display:flex;justify-content:center}
+.signal{width:560px;min-height:240px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(0,0,0,.12));backdrop-filter:blur(6px);box-shadow:0 12px 40px rgba(2,20,40,.6);border:1px solid rgba(255,255,255,.04)}
+.signal-text{font-size:2.6rem;font-weight:900;color:var(--muted);letter-spacing:1px}
+.reason{margin-top:6px;font-size:.95rem;color:#dbe6ff}
+.accuracy{margin-top:10px;color:#ffd54a;font-weight:800}
+.signal.buy{background:linear-gradient(90deg,#9cf6e6,#16a34a);color:#05221a;box-shadow:0 20px 60px rgba(16,163,122,.22),0 6px 18px rgba(16,163,122,.14)}
+.signal.sell{background:linear-gradient(90deg,#ffb4b4,#ef4444);color:#380606;box-shadow:0 20px 60px rgba(239,68,68,.22),0 6px 18px rgba(239,68,68,.14)}
+.signal.wait{background:linear-gradient(90deg,#fff0c2,#f59e0b);color:#3b2a00;box-shadow:0 20px 60px rgba(245,158,11,.18)}
+.foot{margin-top:16px;text-align:center;color:#9fb4d4;font-weight:700}
+@media(max-width:720px){.signal{width:92vw;padding:18px}.getbtn{width:100%}.controls{flex-direction:column}}
